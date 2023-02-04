@@ -24,13 +24,32 @@ description: >- # this means to ignore newlines until "baseurl:"
   Analysis of Jacobsen Group Paper of the Year Selections
 baseurl: "/PoTY" # the subpath of your site, e.g. /blog
 url: "https://msh-yi.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+github_username:  msh-yi
 
 # Build settings
 theme: minima
 plugins:
   - jekyll-feed
+
+defaults:
+  -
+    scope:
+      type: posts
+      path: _posts
+    values:
+      is_post: true
+      layout: post
+      permalink: /blog/:title/
+  -
+    scope:
+      type: pages
+      path: _pages
+    values:
+      is_post: false
+      layout: default
+
+include: [_pages]
+
 
 # Exclude from processing.
 # The following items will not be processed, by default.
