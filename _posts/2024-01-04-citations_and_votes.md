@@ -27,10 +27,10 @@ categories: PoTY
 
 Every year, group members are given five votes to select papers from the master list to vouch for as their paper of the year. Eric collates votes and we discuss papers that have at least two votes. I always presumed that the number of votes a particular paper received would have some correlation with its scientific impact. With Eric kindly sharing with me data on votes going back to 1999, we have a quantitative way to test this hypothesis!
 
-Impact is scaled by number of citations, and the analysis/comparisons are self-contained within each year. We only have voting data from two votes onwards.
+We 'measure' impact by the number of citations a paper has received since it was published until end-2023 (unfortunately more granular data, like citations each year, is hard to find for free). The analysis/comparisons are self-contained within each year so there is no need to explicitly correct for how long a paper has been out.
 
 ## Overall trends
-
+Coming soon!
 
 ## A deep dive into the most-cited papers and the most-voted papers by year
 Since it appears that the most-voted-for papers and those that end up receiving the most citations are quite disjoint, it would be educational to go through these papers and see where the "disconnects" originate. For each year in question, we will look at the top three most-cited papers from the master list (#1 ,#2, #3) as well as the paper that received the most votes that year.
