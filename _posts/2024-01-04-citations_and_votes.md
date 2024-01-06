@@ -3,42 +3,40 @@ layout: post
 title:  "Do we vote for papers that end up with more citations?"
 categories: PoTY
 ---
+## Methods
+Each year, we construct a "main list" of papers. From 1999 to 2016, the main list contained all papers from major chemistry journals that pertained to asymmetric chemistry. From 2017 onwards, the "main list" criterion has been expanded to include any papers in organic chemistry that are related to the group's research, notably including non-stereoselective reactions.
 
- <style>
-      #scaled-frame {
-        zoom: 0.8;
-        -moz-transform: scale(0.8);
-        -moz-transform-origin: 0 0;
-        -o-transform: scale(0.8);
-        -o-transform-origin: 0 0;
-        -webkit-transform: scale(0.8);
-        -webkit-transform-origin: 0 0;
-      }
-      @media screen and (-webkit-min-device-pixel-ratio:0) {
-        #scaled-frame {
-          zoom: 1;
-        }
-      }
-      iframe {
-        margin: none;
-        padding:none;
-        display:block;}
-    </style>
+Each group member has five votes for papers from the main list to vouch for as their paper of the year. Eric tallies the votes and leads a discussion of papers that have at least two votes. One might wonder whether the number of votes a particular paper receives has some correlation with its "scientific impact." With Eric kindly sharing with me the main paper lists and votes data going back to 1999, we have a quantitative way to test this hypothesis!
 
-Every year, group members are given five votes to select papers from the master list to vouch for as their paper of the year. Eric collates votes and we discuss papers that have at least two votes. I always presumed that the number of votes a particular paper received would have some correlation with its scientific impact. With Eric kindly sharing with me data on votes going back to 1999, we have a quantitative way to test this hypothesis!
+We quantify "impact" using the number of citations a paper has received since it was published, as of Dec 2023. (Unfortunately metadata aggregators are quite protective of more granular data such as the yearly distribution of citations, and I was loath to jump through API paywalls and authentication hoops. :/) 
 
-We 'measure' impact by the number of citations a paper has received since it was published until end-2023 (unfortunately more granular data, like citations each year, is hard to find for free). The analysis/comparisons are self-contained within each year so there is no need to explicitly correct for how long a paper has been out.
+The workflow here is simple: for all papers on the main list, we pull the number of tmes a paper has been cited. We then order the main list by number of citations. The _rank_ of a paper is its position on the reordered list: the most cited paper has rank 1, the second-most rank 2, and so on. Notice that the analysis/comparisons are self-contained within each year so we don't have to correct for how long a paper has been published (i.e. we don't compare/analyze pairs of papers from 2020 and 2003). 
+
+In the following post, we will (i) examine whether there is a correlation between the number of votes and the number of citations a paper received, and (ii) survey top three papers by citation number as well as the top vote-getter for that year, if it is not in the top three-cited papers.
 
 ## Overall trends
-Coming soon!
+***Do papers that receive more votes rank higher in number of citations?***
 
-## A deep dive into the most-cited papers and the most-voted papers by year
-Since it appears that the most-voted-for papers and those that end up receiving the most citations are quite disjoint, it would be educational to go through these papers and see where the "disconnects" originate. For each year in question, we will look at the top three most-cited papers from the master list (#1 ,#2, #3) as well as the paper that received the most votes that year.
+Across each year, we take every paper that received more than two votes and determine its rank by number of times cited. The cutoff for this plot has been set to papers that rank between 1 and 100; there are plenty more papers that received votes but that rank outside this window. As you can see below, papers that receive more votes very roughly rank higher, but this trend is weak. One way to read this plot is to focus on a single color (year) and track the evolution of dots of that color from lower to higher votes. 
+
+![]({{ site.baseurl }}/assets/img/rank_vs_votes.png)
+
+A year-by-year breakdown is available [here]({{ site.baseurl }}/assets/img/rank_vs_votes_year.png){:target="_blank" :width="100%"}.
+
+So, more-voted-for papers are not necessarily more cited among papers that year. How about the correlation between number of votes and _number of citations_? Once again, one way to read this plot is to focus on a single color (year) and track the evolution of dots of that color from lower to higher votes. 
+
+![]({{ site.baseurl }}/assets/img/cites_vs_votes.png)
+
+A year-by-year breakdown is available [here]({{ site.baseurl }}/assets/img/cites_vs_votes_year.png){:target="_blank" :width="100%"}. Once again, 
+
+## A dive into the most-cited papers and the top vote-getter
+Since it appears that the most-voted-for papers and those that end up receiving the most citations generally don't correlate, we'll take a dive into specific papers and see if we can learn anything. The following list is structured as follows: 
+**The top-three most cited papers from the main list, followed by top vote-getter, if it's not one of those three.** Each paper is accompanied by a brief blurb that is the opinion solely of the author.
 
 
 ### 1999
 
-<a href="https://doi.org/10.1021/ja990088k" target="_blank">**Stereoselective Ring-Opening Polymerization of meso-Lactide:? Synthesis of Syndiotactic Poly(lactic acid)**</a>\
+<a href="https://doi.org/10.1021/ja990088k" target="_blank">**Stereoselective Ring-Opening Polymerization of meso-Lactide: Synthesis of Syndiotactic Poly(lactic acid)**</a>\
 **Coates** J. Am. Chem. Soc. 1999, 121, 16, 4072–4073\
 (_#1, 448 citations, 4.0 votes_)
 
@@ -46,7 +44,7 @@ Since it appears that the most-voted-for papers and those that end up receiving 
 
 Schiff-base-complex-promoted syndiospecific ring-opening polymerization, forming the foundation for plenty of Geoff Coates' highly impactful early-2000s work. Structure and reactivity of the metal catalyst(s) certainly in line with our group's interests at the time.
 
-<a href="https://doi.org/10.1021/ol990623l" target="_blank">**Enantioselective Synthesis of ?-Amino Nitriles from N-Benzhydryl Imines and HCN with a Chiral Bicyclic Guanidine as Catalyst**</a>\
+<a href="https://doi.org/10.1021/ol990623l" target="_blank">**Enantioselective Synthesis of alpha-Amino Nitriles from N-Benzhydryl Imines and HCN with a Chiral Bicyclic Guanidine as Catalyst**</a>\
 **Corey** Org. Lett. 1999, 1, 1, 157–160\
 (_#2, 441 citations, 0.0 votes_)
 
@@ -54,7 +52,7 @@ Schiff-base-complex-promoted syndiospecific ring-opening polymerization, forming
 
 Catalytic enantioselective Strecker AND with chiral guanidiniums! Still cited today by the likes of Dixon and Choon-Hong Tan. Surprising that this didn't get any votes considering our interest in the Strecker reaction.
 
-<a href="https://doi.org/10.1021/ja984410n" target="_blank">**Polymer-Supported Chiral Co(Salen) Complexes:? Synthetic Applications and Mechanistic Investigations in the Hydrolytic Kinetic Resolution of Terminal Epoxides**</a>\
+<a href="https://doi.org/10.1021/ja984410n" target="_blank">**Polymer-Supported Chiral Co(Salen) Complexes: Synthetic Applications and Mechanistic Investigations in the Hydrolytic Kinetic Resolution of Terminal Epoxides**</a>\
 **Jacobsen** J. Am. Chem. Soc. 1999, 121, 17, 4147–4154\
 (_#3, 380 citations, 0.0 votes_)
 
@@ -66,7 +64,7 @@ Did not vote for our own papers, hence the zero votes.
 **Gansäuer** ACIE 1999, 38, 2909-2910\
 (_#52, 135 citations, 8.0 votes_)
 
-The top vote-getter was "the first example of a transition-metal-catalyzed enantioselective formation of radicals." Instead of controlling nucleophile approach, the titanocene catalysts breaks preferentially one of two enantiotopic C-O bonds of the epoxide, resulting in ring-opening with 93% ee. Impressive demonstration of catalytic control over radical processes.
+The top vote-getter was "the first example of a transition-metal-catalyzed enantioselective formation of radicals." Instead of controlling nucleophile approach, the titanocene catalyst breaks preferentially one of two enantiotopic C-O bonds of the epoxide, resulting in rin g-opening with 93% ee. Impressive demonstration of catalytic control over radical processes.
 
 ### 2000
 
@@ -76,9 +74,9 @@ The top vote-getter was "the first example of a transition-metal-catalyzed enant
 
 ![](https://pubs.acs.org/cms/10.1021/ja994280y/asset/images/medium/ja994280yf1.gif)
 
-All three papers heralded a new wave of highly selective asymmetric organocatalysis and it's branding as such. This one is a seminal report describing highly selective proline organocatalysis.
+All three papers heralded a new wave of highly selective asymmetric organocatalysis and its branding as such. This one is a seminal report describing highly selective proline organocatalysis.
 
-<a href="https://doi.org/10.1021/ja000092s" target="_blank">**New Strategies for Organic Catalysis:? The First Highly Enantioselective Organocatalytic Diels?Alder Reaction**</a>\
+<a href="https://doi.org/10.1021/ja000092s" target="_blank">**New Strategies for Organic Catalysis: The First Highly Enantioselective Organocatalytic Diels–Alder Reaction**</a>\
 **MacMillan** J. Am. Chem. Soc. 2000, 122, 17, 4243–4244\
 (_#2, 1422 citations, 12.0 votes_)
 
@@ -104,7 +102,7 @@ Our top vote-getter is by any measure a highly impactful paper in asymmetric cat
 
 ### 2001
 
-<a href="https://doi.org/10.1021/ja015717g" target="_blank">**New Strategies in Organic Catalysis:? The First Enantioselective Organocatalytic Friedel?Crafts Alkylation**</a>\
+<a href="https://doi.org/10.1021/ja015717g" target="_blank">**New Strategies in Organic Catalysis: The First Enantioselective Organocatalytic Friedel–Crafts Alkylation**</a>\
 **MacMIllan** J. Am. Chem. Soc. 2001, 123, 18, 4370–4371\
 (_#4, 526 citations, 5.0 votes_)
 
@@ -112,7 +110,7 @@ Our top vote-getter is by any measure a highly impactful paper in asymmetric cat
 
 More LUMO-lowering organocatalysis, this time to enable Friedel-Crafts asymmetric alkylations.
 
-<a href="https://doi.org/10.1021/ol0167006" target="_blank">**Catalytic Direct Asymmetric Michael Reactions:? Taming Naked Aldehyde Donors**</a>\
+<a href="https://doi.org/10.1021/ol0167006" target="_blank">**Catalytic Direct Asymmetric Michael Reactions: Taming Naked Aldehyde Donors**</a>\
 **Barbas** Org. Lett. 2001, 3, 23, 3737–3740\
 (_#5, 465 citations, 0.0 votes_)
 
@@ -128,7 +126,7 @@ More classic enamine catalysis, of a Michael reaction
 
 Follow-up to the Carreira study of 2000. Lack of votes probably arises from docking off novelty points.
 
-<a href="https://doi.org/10.1021/ja0034747" target="_blank">**Reaction Microarrays:? A Method for Rapidly Determining the Enantiomeric Excess of Thousands of Samples**</a>\
+<a href="https://doi.org/10.1021/ja0034747" target="_blank">**Reaction Microarrays: A Method for Rapidly Determining the Enantiomeric Excess of Thousands of Samples**</a>\
 **Shair** J. Am. Chem. Soc. 2001, 123, 2, 361–362\
 (_#50, 167 citations, 9.0 votes_)
 
@@ -154,15 +152,15 @@ Akiyama introduces chiral phosphoric acids. Surprising that this totally flew un
 
 Terada introduces chiral phosphoric acids. Ditto.
 
-<a href="https://doi.org/10.1021/ja046259p" target="_blank">**Highly Enantioselective Catalytic Acyl-Pictet?Spengler Reactions**</a>\
+<a href="https://doi.org/10.1021/ja046259p" target="_blank">**Highly Enantioselective Catalytic Acyl-Pictet–Spengler Reactions**</a>\
 **Jacobsen** J. Am. Chem. Soc. 2004, 126, 34, 10558–10559\
 (_#3, 550 citations, 0.0 votes_)
 
 ![](https://pubs.acs.org/cms/10.1021/ja046259p/asset/images/medium/ja046259pn00001.gif)
 
-No votes for our own paper. The Pictet-Spengler reaction has remained a workhorse reaction in oeganocatalysis.
+No votes for our own paper. The Pictet-Spengler reaction has remained a workhorse reaction in organocatalysis.
 
-<a href="https://doi.org/10.1021/ja047901i" target="_blank">**Highly Efficient Synthesis of ?-Amino Acid Derivatives via Asymmetric Hydrogenation of Unprotected Enamines**</a>\
+<a href="https://doi.org/10.1021/ja047901i" target="_blank">**Highly Efficient Synthesis of β-Amino Acid Derivatives via Asymmetric Hydrogenation of Unprotected Enamines**</a>\
 **Merck** J. Am. Chem. Soc. 2004, 126, 32, 9918–9919\
 (_#40, 230 citations, 16.0 votes_)
 
@@ -172,13 +170,13 @@ Our top vote-getter is a refinement on asymmetric hydrogenation from Merck Proce
 
 ### 2005
 
-<a href="https://doi.org/10.1021/ja052431t" target="_blank">**A Homochiral Porous Metal?Organic Framework for Highly Enantioselective Heterogeneous Asymmetric Catalysis**</a>\
+<a href="https://doi.org/10.1021/ja052431t" target="_blank">**A Homochiral Porous Metal–Organic Framework for Highly Enantioselective Heterogeneous Asymmetric Catalysis**</a>\
 **Lin** J. Am. Chem. Soc. 2005, 127, 25, 8940–8941\
 (_#1, 1743 citations, 0.0 votes_)
 
 ![](https://pubs.acs.org/cms/10.1021/ja052431t/asset/images/medium/ja052431tn00001.gif)
 
-MOFs promote additions to aldehydes. Landmark example estalbishing the use of MOFs, to this day, for asymmetric catalysis (see, for a specific example, Phillip Milner's program on "MOFganic chemistry").
+MOFs promote additions to aldehydes. Landmark example establishing the use of MOFs, to this day, for asymmetric catalysis (see, for a specific example, Phillip Milner's program on "MOFganic chemistry").
 
 <a href="https://doi.org/10.1002/anie.200500599" target="_blank">**Diphenylprolinol Silyl Ethers as Efficient Organocatalysts for the Asymmetric Michael Reaction of Aldehydes and Nitroalkenes**</a>\
 **Hayashi** ACIE 2005, 44, 4212.\
@@ -188,13 +186,13 @@ MOFs promote additions to aldehydes. Landmark example estalbishing the use of MO
 
 More classical organocatalysis, probably loses points for conceptual novelty but an important step to highly efficient silylated prolinol designs.
 
-<a href="https://doi.org/10.1002/anie.200462101" target="_blank">**Enantioselective Organocatalyzed ? Sulfenylation of Aldehydes**</a>\
+<a href="https://doi.org/10.1002/anie.200462101" target="_blank">**Enantioselective Organocatalyzed α- Sulfenylation of Aldehydes**</a>\
 **Jørgensen** ACIE 2005, 44, 794\
 (_#3, 877 citations, 0.0 votes_)
 
 See above. Jorgensen's organocatalyst family starts here.
 
-<a href="https://doi.org/10.1021/ja0506509" target="_blank">**Asymmetric Nickel-Catalyzed Negishi Cross-Couplings of Secondary ?-Bromo Amides with Organozinc Reagents**</a>\
+<a href="https://doi.org/10.1021/ja0506509" target="_blank">**Asymmetric Nickel-Catalyzed Negishi Cross-Couplings of Secondary α-Bromo Amides with Organozinc Reagents**</a>\
 **Fu** J. Am. Chem. Soc. 2005, 127, 13, 4594–4595\
 (_#30, 292 citations, 10.25 votes_)
 
@@ -246,7 +244,7 @@ Our top vote-getter pertains to the origin of enantiomeric excess on earth; it's
 
 A Toste classic and a close second in terms of number of votes.
 
-<a href="https://doi.org/10.1021/ja074678r" target="_blank">**Chiral Counteranions in Asymmetric Transition-Metal Catalysis:? Highly Enantioselective Pd/Brønsted Acid-Catalyzed Direct ?-Allylation of Aldehydes**</a>\
+<a href="https://doi.org/10.1021/ja074678r" target="_blank">**Chiral Counteranions in Asymmetric Transition-Metal Catalysis: Highly Enantioselective Pd/Brønsted Acid-Catalyzed Direct α-Allylation of Aldehydes**</a>\
 **List** J. Am. Chem. Soc. 2007, 129, 37, 11336–11337\
 (_#2, 560 citations, 6.0 votes_)
 
@@ -254,7 +252,7 @@ A Toste classic and a close second in terms of number of votes.
 
 Like above, BINOL phosphates as chiral counteranions. Yet another instance where the top two cited papers of the year are concurrent publications on the same theme.
 
-<a href="https://doi.org/10.1021/ja076179w" target="_blank">**Enantioselective Pictet?Spengler-Type Cyclizations of Hydroxylactams:? H-Bond Donor Catalysis by Anion Binding**</a>\
+<a href="https://doi.org/10.1021/ja076179w" target="_blank">**Enantioselective Pictet–Spengler-Type Cyclizations of Hydroxylactams: H-Bond Donor Catalysis by Anion Binding**</a>\
 **Jacobsen** J. Am. Chem. Soc. 2007, 129, 44, 13404–13405\
 (_#3, 490 citations, 0.0 votes_)
 
@@ -262,13 +260,13 @@ Like above, BINOL phosphates as chiral counteranions. Yet another instance where
 
 Enantioinduction through counterion interactions in organocatalysis. Heralds control over highly reactive cationic intermediates.
 
-<a href="https://doi.org/10.1038/nature05553" target="_blank">**Enantioselective halocyclization of polyprenoids induced by nucleophilic phosphoramidites**</a>\
-**Ishihara** Nature 2007, 445, 900\
-(_#9, 372 citations, 10.0 votes_)
+<a href="https://doi.org/10.1126/science.1142696" target="_blank">**Enantioselective Organocatalysis Using SOMO Activation**</a>\
+**MacMillan** Science 2007, 316, 582\
+(_#6, 416 citations, 15.0 votes_)
 
-![](https://media.springernature.com/lw685/springer-static/image/art%3A10.1038%2Fnature05553/MediaObjects/41586_2007_Article_BFnature05553_Fig1_HTML.jpg?as=webp)
+![](https://www.science.org/cms/10.1126/science.1142696/asset/280f2882-f8c4-4d9a-99a9-511000351ac3/assets/graphic/316_582_f1.jpeg)
 
-Our top vote-getter is an enantioselective terpene polycyclization with chiral I+ (chiral H+ was yet to do this reaction well). Aligns with interests in the group at that point.
+Our top vote-getter is MacMillan's widely known prelude to organophotoredox catalysis. This paper is innovative in its own right, but citations-wise is overshadowed by the blockbuster paper that is the next entry in 2008.
 
 ### 2008
 
@@ -288,7 +286,7 @@ Also our top vote-getter for this year, this paper heralded the dawn of organoph
 
 Surprising that this did not receive votes, given the impact of the squaramide catalytic core in both the group's and others' HBD catalysis efforts.
 
-<a href="https://doi.org/10.1002/anie.200801030" target="_blank">**PdII-Catalyzed Enantioselective Activation of C(sp2)?H and C(sp3)?H Bonds Using Monoprotected Amino Acids as Chiral Ligands**</a>\
+<a href="https://doi.org/10.1002/anie.200801030" target="_blank">**PdII-Catalyzed Enantioselective Activation of C(sp2)–H and C(sp3)–H Bonds Using Monoprotected Amino Acids as Chiral Ligands**</a>\
 **Yu** ACIE 2008, 47, 4882\
 (_#3, 606 citations, 3.0 votes_)
 
@@ -298,7 +296,7 @@ Enantioinduction in C-H activation was achieved here - a classic.
 
 ### 2009
 
-<a href="https://doi.org/10.1021/ja9053338" target="_blank">**Enantioselective ?-Trifluoromethylation of Aldehydes via Photoredox Organocatalysis**</a>\
+<a href="https://doi.org/10.1021/ja9053338" target="_blank">**Enantioselective α-Trifluoromethylation of Aldehydes via Photoredox Organocatalysis**</a>\
 **MacMillan** J. Am. Chem. Soc. 2009, 131, 31, 10875–10877\
 (_#1, 896 citations, 5.0 votes_)
 
@@ -306,7 +304,7 @@ Enantioinduction in C-H activation was achieved here - a classic.
 
 Another important demonstration of the power of photoredox catalysis.
 
-<a href="https://doi.org/10.1021/ja905302f" target="_blank">**Organocatalytic Synthesis of Spiro[pyrrolidin-3,3?-oxindoles] with High Enantiopurity and Structural Diversity**</a>\
+<a href="https://doi.org/10.1021/ja905302f" target="_blank">**Organocatalytic Synthesis of Spiro[pyrrolidin-3,3'-oxindoles] with High Enantiopurity and Structural Diversity**</a>\
 **Gong** J. Am. Chem. Soc. 2009, 131, 38, 13819–13825\
 (_#2, 526 citations, 0.0 votes_)
 
@@ -338,7 +336,7 @@ Out top vote-getter features a new enantioselective method in a concise and effi
 
 ![](https://media.springernature.com/lw685/springer-static/image/art%3A10.1038%2Fnature10232/MediaObjects/41586_2011_Article_BFnature10232_Fig1_HTML.jpg?as=webp)
 
-A generalized version of the 2009 top vote-getter, featuring most of the same authors from that study as well. From here on out, the top-cited papers (and vote selections) become dominated by Science and Nature.
+A generalized version of the 2009 top vote-getter, featuring most of the same authors from that study as well. From here on out, the top-cited papers (and vote selections) become dominated by _Science_ and _Nature_ publications.
 
 <a href="https://doi.org/10.1126/science.1199844" target="_blank">**Dynamic Control of Chiral Space in a Catalytic Asymmetric Reaction Using a Molecular Motor**</a>\
 **Feringa** Science 2011, 331, 1429\
@@ -382,7 +380,7 @@ A highly efficient artificial metalloenzyme that happens to be a chiral Cp varia
 
 The second in a pair of papers with the Rovis study. Another way of rendering Cp chiral. Is this a research theme that has really caught on?
 
-<a href="https://doi.org/10.1021/ja3030164" target="_blank">**Catalytic Asymmetric ?-Acylation of Tertiary Amines Mediated by a Dual Catalysis Mode: N-Heterocyclic Carbene and Photoredox Catalysis**</a>\
+<a href="https://doi.org/10.1021/ja3030164" target="_blank">**Catalytic Asymmetric α-Acylation of Tertiary Amines Mediated by a Dual Catalysis Mode: N-Heterocyclic Carbene and Photoredox Catalysis**</a>\
 **Rovis** J. Am. Chem. Soc. 2012, 134, 19, 8094–8097\
 (_#3, 491 citations, 0.0 votes_)
 
@@ -408,7 +406,7 @@ Our top vote-getter is the poster-child report for Krische's hydrogen-borrowing 
 
 Nitrogen fixation is important! One key contribution in the long lineage of N2-to-NH3 papers.
 
-<a href="https://doi.org/10.1126/science.1237068" target="_blank">**Enantio- and Diastereodivergent Dual Catalysis: ?-Allylation of Branched Aldehydes**</a>\
+<a href="https://doi.org/10.1126/science.1237068" target="_blank">**Enantio- and Diastereodivergent Dual Catalysis: α-Allylation of Branched Aldehydes**</a>\
 **Carreira** Science 2013, 340, 1065\
 (_#2, 740 citations, 17.0 votes_)
 
@@ -426,7 +424,7 @@ Directed evolution produces enzymes that have synthetic utility; the first of th
 
 ### 2014
 
-<a href="https://doi.org/10.1126/science.1255525" target="_blank">**Merging photoredox with nickel catalysis: Coupling of ?-carboxyl sp3-carbons with aryl halides**</a>\
+<a href="https://doi.org/10.1126/science.1255525" target="_blank">**Merging photoredox with nickel catalysis: Coupling of α-carboxyl sp3-carbons with aryl halides**</a>\
 **MacMIllan** Science 2014, 345, 437\
 (_#1, 1152 citations, 5.0 votes_)
 
@@ -592,7 +590,7 @@ Our top vote-getter is the first high-profile example of efficient catalytic der
 
 ![](https://media.springernature.com/lw685/springer-static/image/art%3A10.1038%2Fs41586-019-1260-x/MediaObjects/41586_2019_1260_Fig1_HTML.png?as=webp)
 
-A meta-paper that I think deserves the number of citations it has. Essentially devising a rigorous way to determine that you've actually made ammonia from nitrogen
+A meta-paper that I think deserves the number of citations it has. Essentially devising a rigorous way to determine that you've actually made ammonia from nitrogen.
 
 <a href="https://doi.org/10.1038/s41586-019-1760-8" target="_blank">**Domino electroreduction of CO2 to methanol on a molecular catalyst**</a>\
 **Wang** Nature 2019, 575, 639\
@@ -616,7 +614,7 @@ Arguably Connor Coley's breakout paper - a fully automated platform for syntheti
 
 ![](https://www.science.org/cms/10.1126/science.aax3353/asset/e7078a97-8a96-4871-a266-203c9f1ab99c/assets/graphic/365_910_f1.jpeg)
 
-Perhaps a one-hit wonder, in the sense that a truly innovative strategy enabled the modernization and improved efficiency of a workhorse organic transformation. Quite reasonable that it is not cited that much - to this point it has yet to open a new field of organophosphorus chemistry.
+Perhaps a one-hit wonder, in the sense that a truly innovative strategy enabled the modernization and improved efficiency of a workhorse organic transformation. Quite reasonable that it is not that highly cited - to this point it has yet to open a new field of organophosphorus chemistry.
 
 ### 2021
 
@@ -684,6 +682,7 @@ Chemical recycling of polystyrene, more circular plastic economy potential. Simp
 
 ![](https://www.science.org/cms/10.1126/science.abo6443/asset/9130413d-bc82-4e00-9d43-0c644c3bb59b/assets/images/large/science.abo6443-f1.jpg)
 
-Our top vote-getter got us fascinated about the possibility of new, mild carbene-type reactivity. It seems like "new" reactivity concepts arising from the merger of known reactivity principles, presented digestibly, are the zeitgeist of these times.
+Our top vote-getter got us fascinated about the possibility of new, mild carbene-type reactivity. It seems like "new" reactivity concepts arising from the merger of known reactivity principles, presented digestibly, is the zeitgeist of these times.
 
 
+## What do we learn from this?
