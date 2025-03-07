@@ -6,7 +6,7 @@ categories: Literature
 
 I attempted to read every paper published by the towering pioneer in organometallic chemistry <a href="https://en.wikipedia.org/wiki/Jay_Kochi" target="_blank">Jay K. Kochi</a> chronologically to prepare for a literature group meeting. I got to 190/507 before making the call for the sake of my research productivity to read selectively and intentionally. To help me build a mind map of his chemistry, I kept a running stream-of-consciousness summary that is below. I may return to this someday, and apologies for the poor formatting.
 
-Papers are organized by field; bolded numbers follow my indexing system that corresponds roughly to the chronological order that a particular paper was published. Click on the labels to read the paper.
+Papers are organized by field; bolded numbers follow my indexing system that    corresponds roughly to the chronological order that a particular paper was published. Click on the labels to read the paper.
 
 ## Sandmeyer and Meerwein reactions
 
