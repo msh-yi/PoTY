@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "A Practical Guide to *in operando* Low-Temperature NMR Spectroscopy"
+title:  "A Practical Guide to in operando Low-Temperature NMR Spectroscopy"
 categories: Experimental protocols
 ---
 
@@ -9,6 +9,8 @@ This tutorial provides a set of instructions for NMR monitoring of a live reacti
 While the following procedure is specific to Diffusion-ordered spectroscopy (DOSY), the following steps can be adapted to any type of experiment.
 
 On DOSY: A low-temperature DOSY is useful to determine the effective molecular weights of NMR-active species under reaction-relevant conditions. For tracking low-concentration species that are difficult to track by <sup>1</sup>H NMR due to low signal-to-noise or overlapping signals with other species, heteronuclear (non-<sup>1</sup>H) DOSY (e.g. <sup>19</sup>F, <sup>31</sup>P) may be a useful alternative.
+
+`$ <command>` refers to typing "command" into the console in Vnmrj.
 
 The general workflow is:
 1. cool down the instrument
